@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Content Accessor</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Language Accessor</h1>
+            <a href="options.html" target="_blank" class="settings-link" title="Open Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M19.14,12.94a2,2,0,0,0-1.62-.78,2,2,0,0,0-1.63.79L15,14.59V10a1,1,0,0,0-2,0v4.59l-.89-1.64a2,2,0,0,0-3.25,0L8,14.59V5a1,1,0,0,0-2,0V14.59l-.89-1.64a2,2,0,0,0-3.25,0L1,14.59a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0L3.29,15,4,16.41a2,2,0,0,0,1.62.78,2,2,0,0,0,1.63-.79L8.14,15,9,16.41a2,2,0,0,0,1.62.78,2,2,0,0,0,1.63-.79L13.14,15,14,16.41a2,2,0,0,0,1.62.78,2,2,0,0,0,1.63-.79L18.14,15l.88,1.41a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41Z"/>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="current-site">
+            <p>Current Site:</p>
+            <strong id="domain-display">Loading...</strong>
+        </div>
+
+        <div class="language-select-wrapper">
+            <label for="language-select">Select Language:</label>
+            <select id="language-select">
+                <option value="default" selected>Browser Default</option>
+                <option value="zh-TW">繁體中文 (zh-TW)</option>
+                <option value="zh-CN">簡體中文 (zh-CN)</option>
+                <option value="en-US">English (US)</option>
+                <option value="en-GB">English (UK)</option>
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button id="apply-button" class="button button-primary">Apply to this site</button>
+            <button id="remove-button" class="button button-secondary">Remove setting</button>
+        </div>
+
+        <div id="status-message" class="status-message"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

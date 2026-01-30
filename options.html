@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Accessor Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Settings</h1>
+        </header>
+
+        <section class="card">
+            <h2>General</h2>
+            <div class="setting-item">
+                <label for="extension-enabled-toggle">Enable Extension</label>
+                <label class="switch">
+                    <input type="checkbox" id="extension-enabled-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Saved Site Preferences</h2>
+            <p>Here you can manage the language settings for individual websites.</p>
+            
+            <div id="settings-table-container">
+                <table id="settings-table">
+                    <thead>
+                        <tr>
+                            <th>Website (Domain)</th>
+                            <th>Language</th>
+                            <th>Date Set</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="settings-tbody">
+                        <!-- Rows will be dynamically inserted here -->
+                    </tbody>
+                </table>
+                <p id="no-settings-message" class="empty-message">No sites have been configured yet.</p>
+            </div>
+            
+            <div class="footer-actions">
+                <button id="clear-all-button" class="button button-danger">Clear All Settings</button>
+            </div>
+        </section>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
