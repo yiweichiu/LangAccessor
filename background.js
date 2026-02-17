@@ -78,7 +78,7 @@ async function updateRules() {
 
     try {
         const existingRules = await chrome.declarativeNetRequest.getDynamicRules();
-        const ruleIdsToRemove = existingRules.map(rule => rule.id).filter(id => !activeRuleIds.includes(id));
+        const ruleIdsToRemove = existingRules.map(rule => rule.id);
         
         // Clean up the ruleIdMap for domains that no longer have rules
         const activeDomains = Object.keys(ruleIdMap).filter(domain => activeRuleIds.includes(ruleIdMap[domain]));
